@@ -41,9 +41,10 @@ class Bat(games.Sprite):
         for ball in self.overlapping_sprites:
             self.score.value += 1
             self.score.right = games.screen.width - 10
-            ball.ball_bounce()
             if self.score.value % 5 == 0:
                 ball.ball_speed()
+                ball.ball_bounce()
+            else:
                 ball.ball_bounce()
 
 
